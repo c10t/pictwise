@@ -5,6 +5,23 @@
   <div class="siimple--float-right">
     <div class="siimple-navbar-item">Profile</div>
   </div>
-  <div class="siimple-content siimple-content--extra-large"></div>
+  <div class="siimple-content siimple-content--extra-large">
+    {% for line in contents %}
+    <div class="siimple-grid-row">
+      {% for item in line %}
+      <div class="siimple-grid-col siimple-grid-col--3">
+        <div class="siimple-card" style="max-width:300px">
+          <div class="siimple-card-header">
+            {{ item.title }}
+          </div>
+          <div class="siimple-card-body">
+            <img src="static/sample.jpg" width="280px" height="210px">
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
 </div>
 {% endblock %}
